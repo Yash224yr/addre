@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    align-items: center;
+    background: #16222a;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#content {
+    content: "";
+    position: fixed;
+    display: block;
+    top: 0;
+    right: -320px;
+    width: 18%;
+    height: 100vh;
+    background-color: wheat;
+    transition: 0.6s ease-in-out;
+}
+
+#content.active {
+    right: 0;
+}
+
+#content ul {
+    margin: 94px 36px;
+    list-style: none;
+}
+
+#content ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .35);
+    backdrop-filter: blur(3px);
+}
+
+.backdrop.active {
+    display: block;
+}
+
+#content ul li {
+    font-size: 20px;
+    margin: 40px 0;
+}
+
+header #logo img {
+    height: 50px;
+    width: 112px;
+    cursor: pointer;
+}
+
+.cros {
+    content: "";
+    position: absolute;
+    top: 38px;
+    right: 55px;
+    font-size: 24px;
+    transition: 0.5s;
+    color: black;
+}
+
+header #home a {
+    font-size: 25px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+#section1 {
+    height: 90vh;
+    width: 95%;
+    margin: 20px auto;
+}
+
+#section1 img {
+    height: 100%;
+    width: 100%;
+}
+
+#section2 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    padding-top: 100px;
+    background-color: #fcf5ed;
+}
+
+#section2 .designer1,
+#section2 .designer2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+
+#section2 .designer1 h2,
+#section2 .designer2 h2 {
+    margin: 20px 0;
+}
+
+#section2 .designer1 h1,
+#section2 .designer2 h1 {
+    margin-top: 20px;
+}
+
+
+#section2 img {
+    height: 60%;
+    width: 45%;
+    border-radius: 50%;
+}
+
+.section2-show {
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section2-show.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.section {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s, transform 0.4s;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#button {
+    content: "";
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    font-size: 41px;
+    border: 3px solid;
+    height: 78px;
+    width: 85px;
+    padding: 14px 28px;
+    border-radius: 50%;
+    background-color: #16222a;
+    cursor: pointer;
+    color: white;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+  }
+
+  #button:hover{
+    transform: translateY(-10px);
+  }
+  #section3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 3rem;
+    background-color: #e4f4ff;
+}
+.meet{
+    text-align: center;
+}
+.meet h1{
+    background-color: #16222a;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+.meet h1:hover{
+    background-color: white;
+    color: #16222a;
+}
+.teammembers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.member{
+    height: 40%;
+    width: 40%;
+    margin: 2rem;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: column;
+}
+.member img{
+    height: 50%;
+    width: 60%;
+    margin-bottom: 1rem;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+#section4{
+    height: 100vh;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.commercialproject ,.residentialproject{
+    width: 30%;
+    margin: 0 3rem;
+}
+.commercialproject img, .residentialproject img{
+    height: 500px;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+}
+.project{
+    border: 2px solid black;
+    margin-top: 10px ;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+}
+
+.project::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #16222a;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: -1;
+}
+.project:hover::before{
+left:0;
+transition: all 0.7s ease-in-out;
+}
+.project:hover{
+    color: white;
+}
+.project i{
+    padding-left: 40px;
+}
+#section6{
+    display: flex;
+    height: 100vh;
+    padding: 50px 100px;
+    margin-top: 100px;
+    background-color: lightgrey;
+}
+
+
+#section6 .msg{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 23px;
+    background-color:  rgba(255,255,255,1);
+}
+
+#section6 .msg h1 ,
+.contact-info
+{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#section6 .msg form{
+    display: flex;
+    flex-direction: column;
+}
+#section6 .msg form input{
+    height: 20%;
+}
+#section6 .msg form input, #section6 .msg form textarea{
+    width: 80%;
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 15px;
+
+}
+#section6 .msg form textarea{
+height: 50%;
+}
+#section6 .msg form button{
+height: 20%;
+width: 28%;
+cursor: pointer;
+background-color: #ff5e14;
+color: white;
+border: none;
+font-weight: bold;
+font-size: 15px;
+margin-top: 15px;
+}
+#section6 .contact{
+    width: 50%;
+    display: flex;
+    background-color: #ffe;
+    padding: 50px 23px;
+    flex-direction: column;
+}
+#section6 .contact .detail{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#section6 .contact .detail .info{
+    width: 50%;
+    height: 10%;    
+    margin: 52px 0 ;
+    display: flex;
+    align-items: center;
+}
+
+#section6 .contact .detail .info i{
+color: #ff5e14;
+font-size: 30px;
+
+}
+
+#section6 .detail .gettouch{
+    margin-left: 20px;
+}
+
+#section6 .contact .follow h1{
+    margin: 25px 0;
+}
+
+#section6 .contact .follow a{
+    font-size: 35px;
+    color: #9d3e13;
+}
+#section6 .contact .follow .social {
+    display: flex;
+}
+#section6 .contact .follow .social-right a{
+    margin-left: 20px;
+}
