@@ -1,0 +1,577 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+
+body {
+  /* background-color: rgba(229, 221, 208, 0.67); */
+  /* background-color: #e5ddd0; */
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+}
+
+header img {
+  width: 150px;
+}
+
+aside {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.81);
+  justify-content: center;
+  align-items: center;
+  top: -100vh;
+  transition: top 0.55s ease-out;
+}
+
+aside nav {
+  display: none;
+}
+
+@keyframes showMenu {
+  0% {
+    top: -100vh;
+  }
+
+  30% {
+    top: 0;
+  }
+
+  50% {
+    top: -15vh;
+  }
+
+  70% {
+    top: 0;
+  }
+
+  80% {
+    top: -5vh;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes hideMenu {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: -100vh;
+  }
+}
+
+aside a {
+  color: #fff;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 0.5rem;
+}
+
+#close {
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  color: #fff;
+  font-size: 4rem;
+}
+
+#ham {
+  position: absolute;
+  right: 2rem;
+  top: 40%;
+}
+
+#ham i {
+  font-size: 2rem;
+  color: #000;
+}
+
+#hero {
+  height: 100vh;
+  background-image: url(images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#cta {
+  position: relative;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  max-width: 50vw;
+  width: 500px;
+
+}
+
+#cta h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+#cta p {
+  padding: 0.5rem 0;
+}
+
+#cta a {
+  border: 4px solid #000;
+  padding: 0.75rem 2rem;
+  margin-top: 1rem;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+#prompt {
+  width: 100%;
+  min-width: 300px;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+#prompt h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 48px;
+  margin-bottom: 3rem;
+  word-spacing: 10px;
+}
+
+#prompt p {
+  font-size: 14px;
+}
+
+#principal .principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(229, 221, 208, 0.67);
+  padding: 4rem 2rem;
+}
+
+#principal .principal .left,
+#principal .principal .right {
+  width: 40%;
+}
+
+#principal .principal .introduction {
+  text-align: center;
+}
+
+#principal .principal .introduction h2 {
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#principal .principal img {
+  max-width: 450px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 0.5rem;
+  aspect-ratio: 2/2;
+  object-fit: cover;
+}
+
+
+#meet-team {
+  padding: 3rem 0 0 0;
+}
+
+#meet-team .team-member-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#meet-team .team-member {
+  width: 50%;
+  max-height: 500px;
+  background: #000;
+  position: relative;
+}
+
+#meet-team .team-member:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#000), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, #000 0, rgba(0, 0, 0, 0) 100%);
+}
+
+#meet-team .team-member:first-of-type {
+  background-image: url('images/Devanshi Chola.webp');
+}
+
+#meet-team .team-member:nth-of-type(2) {
+  background-image: url('images/Neha Tomar.jpg');
+}
+
+#meet-team .team-member:nth-of-type(3) {
+  background-image: url('images/Aryan Singh.webp');
+}
+
+#meet-team .team-member:last-of-type {
+  background-image: url('images/Yash Jain.webp');
+}
+
+#meet-team .team-member img {
+  object-fit: cover;
+}
+
+#meet-team .team-member .content {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+}
+
+
+#meet-team h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: capitalize;
+  padding-bottom: 3rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#contact-us {
+  background-color: lightgrey;
+  padding: 20px 70px;
+  display: flex;
+}
+
+.sendmsg {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+}
+
+.sendmsg form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.sendmsg form input {
+     height: 58px;
+    width: 80%;
+    padding: 10px;
+    margin-top: 14px;
+}
+.sendmsg form textarea{
+  width: 80%;
+  margin-top: 14px;
+  padding: 10px;
+}
+.sendmsg form button{
+  margin-top: 15px;
+  height: 44px;
+  width: 20%;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+
+.contact-detail {
+  width: 50%;
+  background-color: rgba(229, 221, 208, 0.67);
+  padding: 20px 50px;
+}
+
+.details{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icons-detail{
+  width: 100%;
+  height: 88px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.icons-detail a{
+  font-size: 24px;
+  width: 20%;
+}
+.icons-detail .info{
+  width: 80%;
+}
+
+.follow-us{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow-us .social-acount a{
+  font-size: 35px;
+  margin: 5px 12px;
+  color: black;
+}
+
+
+
+@media all and (max-width: 1200px) {
+  header img {
+    width: 70px;
+  }
+
+  #cta {
+    padding-top: 3rem;
+  }
+
+  #cta h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  #cta a {
+    margin-top: 0rem;
+    padding: 0.45rem 1.5rem;
+  }
+
+  #cta p {
+    padding: 0.3rem 0;
+  }
+  .icons-detail a {
+    font-size: 24px;
+    width: 14%;
+  }
+  .contact-detail {
+    padding: 20px 10px;
+}
+.sendmsg{
+  padding: 20px 10px;
+
+}
+
+}
+
+@media all and (max-width: 920px) {
+  header img {
+    width: 70px;
+  }
+
+  #cta {
+    max-width: 100vw;
+    padding-top: 3rem;
+  }
+
+  #cta h1 {
+    font-size: 1.75rem;
+    margin-top: 1rem;
+
+  }
+
+  #cta a {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.5rem 1.5rem;
+  }
+  #contact-us {
+    padding: 20px 28px;
+  }
+}
+
+@media all and (max-width:800px){
+  #contact-us{
+    flex-direction: column;
+  }
+  .sendmsg {
+    width: 100%;
+    padding: 20px 38px;
+}
+.contact-detail {
+  width: 100%;
+  padding: 20px 38px;
+}
+.icons-detail{
+  font-size: 11px;
+  width: 46%;
+}
+#contact-us {
+  padding: 20px 23px;
+}
+.sendmsg form{
+  margin-top: 0;
+}
+}
+
+/* @media all and (max-width: 768px){
+    #hero{
+        height: auto;
+    }
+} */
+
+@media all and (max-width: 600px) {
+
+  #principal .principal .left,
+  #principal .principal .right {
+    width: 100%;
+  }
+
+  #principal .principal img {
+    max-width: 100%;
+    height: 250px;
+  }
+
+  #principal .principal {
+    flex-direction: column-reverse;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  #contact-us {
+    padding: 0;
+  }
+  .icons-detail {
+    font-size: 11px;
+    width: 100%;
+    height: 50px;
+    margin-top: 9px;
+}
+.follow-us {
+  margin-top: 7px;
+}
+.sendmsg form input {
+  height: 41px;
+  width: 100%;
+}
+.sendmsg form textarea{
+width: 100%;
+}
+.sendmsg form button{
+  width: 28%;
+}
+}
+
+@media all and (max-width: 500px) {
+  #prompt {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    min-width: auto;
+  }
+
+  #prompt h1 {
+    font-size: 1.25rem;
+    word-spacing: normal;
+    line-height: normal;
+  }
+
+  #prompt h1,
+  #prompt p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  header img {
+    width: 50px;
+  }
+
+  #cta h1 {
+    font-size: 1.75rem;
+    margin-top: 0.75rem;
+  }
+
+  #cta a {
+    margin-top: 0rem;
+    padding: 0.4rem 1.2rem
+  }
+
+  #ham i {
+    font-size: 1.5rem;
+  }
+
+  #meet-team .team-member-wrapper {
+    flex-direction: column;
+  }
+
+  #meet-team .team-member {
+    width: 100%;
+  }
+  .sendmsg form input {
+    height: 41px;
+    width: 100%;
+  }
+  .sendmsg form textarea{
+  width: 100%;
+  }
+  .sendmsg form button{
+    width: 28%;
+  }
+  
+}
+
+@media all and (max-width : 400px){
+  .contact-detail {
+    padding: 20px 11px;
+  }
+  .sendmsg{
+    padding: 20px 11px;
+  }
+}
