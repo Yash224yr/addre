@@ -333,10 +333,11 @@ aside a {
   color: #FFFFFF;
   font-size: 20px;
 }
-
 .sendmsg form button:hover{
-  color: lightsalmon;
+  background-color: #1a6c7a;
 }
+
+
 
 
 .contact-detail {
@@ -382,6 +383,89 @@ aside a {
   margin: 5px 12px;
   color: black;
 }
+
+#portfolio{
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-around;
+}
+.residential {
+  width: 45%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("images/studio3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+.residential .project, .commercial .project{
+ content: "";
+ position: absolute;
+ transform: translate(-50%, -50%);
+ top: 50%;
+ left: 50%;
+}
+.residential .project p , .commercial .project p{
+  color: #fff;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.residential .project a, .commercial .project a{
+  border: 2px solid #009688;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: calc(60px + 6vw);
+  position: relative;
+  font-size: calc(12px + 0.3vw);
+}
+
+
+.residential .project a::before, .commercial .project a::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #009688;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  border-radius: 25px;
+  transition: 0.5s;
+  z-index: -1;
+}
+.residential a:hover::before, .commercial a:hover::before {
+  left: 0;
+}
+.residential a:hover, .commercial a:hover{
+  border: none;
+}
+
+
+.commercial{
+  width: 45%;
+background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),url("images/studio5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
 
 
 
@@ -532,6 +616,7 @@ width: 100%;
 .sendmsg form button{
   width: 28%;
 }
+
 }
 
 @media all and (max-width: 500px) {
