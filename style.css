@@ -329,8 +329,13 @@ aside a {
   height: 44px;
   width: 20%;
   cursor: pointer;
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.sendmsg form button:hover{
+  color: lightsalmon;
 }
 
 
@@ -354,8 +359,11 @@ aside a {
 }
 
 .icons-detail a{
-  font-size: 24px;
-  width: 20%;
+  font-size: 25px;
+  width: 16%;
+}
+#contact-us h1{
+  font-weight: 600;
 }
 .icons-detail .info{
   width: 80%;
@@ -410,8 +418,18 @@ aside a {
   padding: 20px 10px;
 
 }
-
+#contact-us {
+  padding: 20px 32px;
 }
+.sendmsg {
+  padding: 20px 33px;
+}
+.contact-detail {
+  padding: 20px 33px;
+}
+}
+
+
 
 @media all and (max-width: 920px) {
   header img {
@@ -437,6 +455,12 @@ aside a {
   #contact-us {
     padding: 20px 28px;
   }
+  .sendmsg form input{
+    width: 95%;
+  }
+  .sendmsg form textarea{
+    width: 95%;
+  }
 }
 
 @media all and (max-width:800px){
@@ -452,7 +476,7 @@ aside a {
   padding: 20px 38px;
 }
 .icons-detail{
-  font-size: 11px;
+  font-size: 12px;
   width: 46%;
 }
 #contact-us {
