@@ -386,7 +386,7 @@ aside a {
 
 #portfolio{
   display: flex;
-  padding: 120px 20px;
+  padding: 90px 20px;
   justify-content: space-around;
   background-color: #F9F9F9;
 }
