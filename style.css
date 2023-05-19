@@ -673,7 +673,7 @@ width: 100%;
   }
   #portfolio{
     flex-direction: column;
-    padding: 50px 0;
+    padding: 25px 23px;
   }
   .residential{
     width: 100%;
